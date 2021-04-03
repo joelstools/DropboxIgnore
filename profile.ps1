@@ -1,5 +1,18 @@
 # These functions are based on https://help.dropbox.com/files-folders/restore-delete/ignored-files.
-# Use an absolute path as the argument to each function.
+# Use one or more file paths as the arguments to each function.
 
-Function DropboxIgnore { Set-Content -Path "$($args[0])" -Stream com.dropbox.ignored -Value 1 }
-Function DropboxSync { Clear-Content -Path "$($args[0])" -Stream com.dropbox.ignored }
+ Function DropboxIgnore {
+
+    for ($i = 3; $i -le $args.Length; $i++) {
+
+        Set-Content -Path "$($args[$i])" -Stream com.dropbox.ignored -Value 1
+    }
+}
+
+Function DropboxSync { 
+
+    for ($i = 3; $i -le $args.Length; $i++) {
+
+        Clear-Content -Path "$($args[$i])" -Stream com.dropbox.ignored
+    }
+}
