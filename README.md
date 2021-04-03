@@ -45,8 +45,8 @@ This project and code is released under the MIT license. You may use and modify 
 
 ### Apple MacOS and Linux
 
-Copy the contents of the .bashrc file to the startup file of your choice; usually .bashrc or .zshrc if you use Z shell.
-This is not the appropriate venue to discuss startup files, but .bashrc and .zshrc normally run for interactive shells.
+Copy the contents of the ***bash_or_zsh.sh*** file to the startup file of your choice; usually .bashrc, or .zshrc if you use Z shell.
+This is not the appropriate venue to discuss the intricacies of startup files, but .bashrc and .zshrc normally run for interactive shells.
 This file supports Bash and Z shell for both MacOS and Linux in the same script, but you can copy out just the functions for your specific operating system if you choose.
 
 From the command line use ***dropboxignore <path>*** to add one or more file paths (directory or file) that should not be synced.
